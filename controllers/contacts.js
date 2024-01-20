@@ -22,7 +22,7 @@ const getById = async (req, res) => {
     .getDb()
     .db(dbName)
     .collection(dbCollection)
-    .find()
+    .find({_id: userId})
   result.toArray().then((lists) => {
     res.json(lists[0])
   })

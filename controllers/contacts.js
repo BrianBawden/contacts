@@ -9,8 +9,8 @@ app.use(express.json)
 
 
 const getAll = async (req, res) => {
+  
   try{
-
     const result = await mongodb
       .getDb()
       .db(dbName)
@@ -43,17 +43,26 @@ const getById = async (req, res) => {
 
 const insertOne = async (req, res) => {
 
-  const result = await mongodb
-    .getDb()
-    .db(dbName)
-    .collection(dbCollection)
-    .insertOne(req.body)
-    .then(result => {
-      res.send(result.insertedId).status(201)
-    })
-    .catch(err =>{
-      res.status(500).json({err: "Failed to create."})
-    })
+  const requiredFields = ["firstName", "lastName", "email", "favoriteColor", "birthday"]
+  const hasRequiredFields = requiredFields.every(field => req.body[field] !== undefined)
+
+  if (!hasRequiredFields){
+    return res.status(400).send("All fields are required")
+  }
+
+  try{
+      const result = await mongodb
+        .getDb()
+        .db(dbName)
+        .collection(dbCollection)
+        .insertOne(req.body)
+        .then(result => {
+          res.send(result.insertedId).status(201)
+        })
+
+  }catch(err){
+    res.status(400).send("Add failed. " + err)
+  }
 }
 
 module.exports = {

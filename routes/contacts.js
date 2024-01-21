@@ -7,4 +7,6 @@ router.get('/', contactsController.getAll)
 
 router.get('/:id', contactsController.getById)
 
+router.post('/insertOne', contactsController.insertOne)
+
 module.exports = router

@@ -42,19 +42,12 @@ const getById = async (req, res) => {
 }
 
 const insertOne = async (req, res) => {
-  // const firstName = req.params.firstName
-  // const lastName = req.params.lastName
-  // const email = req.params.email
-  // const favoriteColor = req.params.favoriteColor
-  // const birthday = req.params.birthday
-
-  const newPerson = req.body
 
   const result = await mongodb
     .getDb()
     .db(dbName)
     .collection(dbCollection)
-    .insertOne({newPerson})
+    .insertOne(req.body)
     .then(result => {
       res.send(result.insertedId).status(201)
     })

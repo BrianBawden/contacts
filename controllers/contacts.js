@@ -1,3 +1,4 @@
+const { response } = require('express')
 const mongodb = require('../db/connect')
 const ObjectId = require('mongodb').ObjectId
 const dbName = "contacts"
@@ -26,6 +27,26 @@ const getById = async (req, res) => {
   result.toArray().then((lists) => {
     res.json(lists[0])
   })
+}
+
+const insertOne = async (req, res) => {
+  const firstName = req.params.firstName
+  const lastName = req.params.lastName
+  const email = req.params.email
+  const favoriteColor = req.params.favoriteColor
+  const birthday = req.params.birthday
+  const result = await mongodb
+    .getDb()
+    .db(dbName)
+    .collection(dbCollection)
+    .insertOne({
+      firstName: `${firstName}`,
+      lastName: `${lastName}`,
+      email: `${email}`,
+      favoriteColor: `${favoriteColor}`,
+      birthday: `${birthday}`
+  })
+  res.send(result.insertedId)
 }
 
 module.exports = {

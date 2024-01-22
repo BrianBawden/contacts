@@ -9,4 +9,10 @@ router.get('/:id', contactsController.getById)
 
 router.post('/insertOne', contactsController.insertOne)
 
+router.put('/id-to-modify/:id', contactsController.updateOne)
+
+router.delete('/delete/:id', contactsController.deleteOne)
+// router.delete('/delete/:id', contactsController.deleteOne);
+
+
 module.exports = router

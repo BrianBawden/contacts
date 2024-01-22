@@ -1,16 +1,27 @@
 //LocalHost
 
-###
-
-http://localhost:8080/contacts/2
-
-###
-
-http://localhost:8080/contacts/6
-
-###
+### getAll
 
 http://localhost:8080/contacts/
+
+### getById
+
+http://localhost:8080/contacts/65ae827a4b0bc18462f028d5
+
+### insertOne
+
+http://localhost:8080/contacts/insertOne
+
+###  updateOne
+
+http://localhost:8080/contacts//id-to-modify/65ae827a4b0bc18462f028d5
+
+### deleteOne
+
+http://localhost:8080/contacts/delete/65ae827a4b0bc18462f028d5
+
+
+
 
 
 // Web Request

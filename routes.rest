@@ -23,11 +23,11 @@ Content-Type: application/json
 
 ###  updateOne
 
-PUT http://localhost:8080/contacts//id-to-modify/65ae83b04b0bc18462f028d6 HTTP/1.1
+PUT http://localhost:8080/contacts/id-to-modify/65ae83b04b0bc18462f028d6 HTTP/1.1
 Content-Type: application/json
 
 {
-  "firstName": "TName"
+  "firstName": "Star"
 }
 
 ### deleteOne
@@ -40,14 +40,36 @@ DELETE http://localhost:8080/contacts/delete/65ae83b04b0bc18462f028d6
 
 // Web Request
 
-###
+### getAll
 
-https://contacts-qk5v.onrender.com/contacts
+GET https://contacts-qk5v.onrender.com/contacts
 
-###
+### getById
 
-https://contacts-qk5v.onrender.com/contacts/1
+GET https://contacts-qk5v.onrender.com/contacts/65a9e4729b3c624ca2c691ec
 
-###
+### insertOne
 
-https://contacts-qk5v.onrender.com/contacts/5
+POST https://contacts-qk5v.onrender.com/contacts/insertOne HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Web",
+  "lastName": "Name",
+  "email": "brian@gmail.com",
+  "favoriteColor": "blue",
+  "birthday": "June 1"
+}
+
+### updateOne
+
+PUT https://contacts-qk5v.onrender.com/contacts/id-to-modify/65ae83b04b0bc18462f028d6 HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Brenda"
+}
+
+### delete
+
+DELETE https://contacts-qk5v.onrender.com/contacts/delete/65ae83b04b0bc18462f028d6

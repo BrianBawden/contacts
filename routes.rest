@@ -2,23 +2,37 @@
 
 ### getAll
 
-http://localhost:8080/contacts/
+GET http://localhost:8080/contacts/
 
 ### getById
 
-http://localhost:8080/contacts/65ae827a4b0bc18462f028d5
+GET http://localhost:8080/contacts/65a9e4729b3c624ca2c691ec
 
 ### insertOne
 
-http://localhost:8080/contacts/insertOne
+POST http://localhost:8080/contacts/insertOne HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "TestName",
+  "lastName": "testing",
+  "email": "brian@gmail.com",
+  "favoriteColor": "blue",
+  "birthday": "June 22"
+}
 
 ###  updateOne
 
-http://localhost:8080/contacts//id-to-modify/65ae827a4b0bc18462f028d5
+PUT http://localhost:8080/contacts//id-to-modify/65ae83b04b0bc18462f028d6 HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "TName"
+}
 
 ### deleteOne
 
-http://localhost:8080/contacts/delete/65ae827a4b0bc18462f028d5
+DELETE http://localhost:8080/contacts/delete/65ae83b04b0bc18462f028d6
 
 
 

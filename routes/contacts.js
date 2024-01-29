@@ -7,7 +7,7 @@ router.get('/', contactsController.getAll)
 
 router.get('/:id', contactsController.getById)
 
-router.post('/insertOne', contactsController.insertOne)
+router.post('/insertOne/', contactsController.insertOne)
 
 router.put('/id-to-modify/:id', contactsController.updateOne)
 

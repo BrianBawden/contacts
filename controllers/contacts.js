@@ -47,6 +47,21 @@ const insertOne = async (req, res) => {
     "favoriteColor",
     "birthday",
   ];
+
+  /* #swagger.parameters['body'] = {
+    in: 'body',
+    description: 'add new contact',
+    required: true,
+    schema: {
+      $firstName: '',
+      $lastName: '',
+      $email: '',
+      $favoriteColor: '',
+      $birthday: ''
+    }
+  }
+  */
+
   const hasRequiredFields = requiredFields.every(
     (field) => req.body[field] !== undefined
   );

@@ -59,23 +59,23 @@
               "properties": {
                 "firstName": {
                   "type": "string",
-                  "example": ""
+                  "example": "newFirstName"
                 },
                 "lastName": {
                   "type": "string",
-                  "example": ""
+                  "example": "newLastName"
                 },
                 "email": {
                   "type": "string",
-                  "example": ""
+                  "example": "newEmail@email.com"
                 },
                 "favoriteColor": {
                   "type": "string",
-                  "example": ""
+                  "example": "newColor"
                 },
                 "birthday": {
                   "type": "string",
-                  "example": ""
+                  "example": "XX/XX/XXXX"
                 }
               },
               "required": [

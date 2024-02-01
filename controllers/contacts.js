@@ -53,11 +53,11 @@ const insertOne = async (req, res) => {
     description: 'add new contact',
     required: true,
     schema: {
-      $firstName: '',
-      $lastName: '',
-      $email: '',
-      $favoriteColor: '',
-      $birthday: ''
+      $firstName: 'newFirstName', 
+      $lastName: 'newLastName', 
+      $email: 'newEmail@email.com', 
+      $favoriteColor: 'newColor', 
+      $birthday: 'XX/XX/XXXX'
     }
   }
   */

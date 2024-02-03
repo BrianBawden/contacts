@@ -31,3 +31,4 @@ mongodb.initDb((err, mongodb) => {
     console.log(`DB connected listening on ${port}`)
   }
 })
+

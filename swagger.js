@@ -8,7 +8,7 @@ const doc = {
   host: 'localhost:8080'
 };
 
-const outputFile = './swagger-output.json';
+const outputFile = './swagger.json';
 const routes = ['./routes/index.js'];
 
 /* NOTE: If you are using the express Router, you must pass in the 'routes' only the 

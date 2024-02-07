@@ -10,7 +10,7 @@ app
   .use(bodyParser.json())
   .use(cors())
   .use((req, res, next) =>{
-    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('*')
     next()
   })
   .use('/', require('./routes'))

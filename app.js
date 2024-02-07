@@ -8,9 +8,9 @@ const app = express()
 
 app 
   .use(bodyParser.json())
-  .use(cors())
+  .use(cors('*'))
   .use((req, res, next) =>{
-    res.setHeader('*')
+    res.setHeader('Access-Control-Allow-Origin', '*')
     next()
   })
   .use('/', require('./routes'))
